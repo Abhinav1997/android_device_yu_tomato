@@ -135,9 +135,6 @@ COMMON_GLOBAL_CFLAGS += -DRIL_SUPPORTS_SEEK
 # Init
 TARGET_INIT_VENDOR_LIB := libinit_msm
 
-# CMHW
-BOARD_HARDWARE_CLASS += device/micromax/tomato/cmhw/src
-
 # SELinux
 BOARD_SEPOLICY_DIRS += \
     device/yu/tomato/sepolicy

@@ -104,10 +104,6 @@ PRODUCT_PACKAGES += \
     charger_mmx \
     charger_res_images
 
-# CMHW JNI
-PRODUCT_PACKAGES += \
-    libjni_cmhw
-
 # CRDA
 PRODUCT_PACKAGES += \
     crda \
