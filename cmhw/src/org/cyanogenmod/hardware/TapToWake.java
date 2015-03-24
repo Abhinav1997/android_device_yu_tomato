@@ -21,16 +21,18 @@ import org.cyanogenmod.hardware.util.FileUtils;
 public class TapToWake {
 
     private static String CONTROL_PATH = "/sys/devices/virtual/touchscreen/touchscreen_dev/gesture_ctrl";
+    private static boolean mEnabled = true;
 
     public static boolean isSupported() {
         return true;
     }
 
     public static boolean isEnabled()  {
-        return (Long.decode(FileUtils.readOneLine(CONTROL_PATH)) & 0x200) == 0x200;
+        return mEnabled;
     }
 
     public static boolean setEnabled(boolean state)  {
+        mEnabled = state;
         return FileUtils.writeLine(CONTROL_PATH, (state ? "double_click=true" : "double_click=false"));
     }
 }
