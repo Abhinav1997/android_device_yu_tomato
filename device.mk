@@ -101,7 +101,7 @@ PRODUCT_PACKAGES += \
 
 # Charger
 PRODUCT_PACKAGES += \
-    charger_mmx \
+    charger \
     charger_res_images
 
 # CRDA
